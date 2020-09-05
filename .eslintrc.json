@@ -348,10 +348,7 @@
 		"sort-keys": "off",
 		"sort-vars": "off",
 		"space-before-blocks": "error",
-		"space-before-function-paren": [
-			"error",
-			"never"
-		],
+		"space-before-function-paren": "off",
 		"space-in-parens": [
 			"error",
 			"never"
@@ -415,12 +412,6 @@
 			}
 		],
 		"@typescript-eslint/type-annotation-spacing": "off",
-		"@typescript-eslint/interface-name-prefix": [
-			"error",
-			{
-				"prefixWithI": "never"
-			}
-		],
 		"@typescript-eslint/array-type": [
 			"off",
 			{
@@ -429,7 +420,6 @@
 				"array-simple": false
 			}
 		],
-		"@typescript-eslint/no-unused-vars": "error",
 		"react/jsx-alignment": "off",
 		"react/jsx-curly-spacing": [
 			"error",
