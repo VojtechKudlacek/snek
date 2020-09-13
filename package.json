@@ -10,7 +10,7 @@
     "be:dev": "nodemon",
     "be:build": "tsc server/index.ts",
     "be:test": "echo \"SOON\"",
-    "test": "ts-node --files ./server/index.ts"
+    "test": "ts-node server/index.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,6 +54,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "socket.io-client": "^2.3.0",
+    "ts-node": "^9.0.0",
     "typescript": "^3.7.5"
   }
 }
