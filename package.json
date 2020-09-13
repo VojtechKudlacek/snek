@@ -8,7 +8,7 @@
     "fe:build": "react-scripts build",
     "fe:test": "react-scripts test",
     "be:dev": "nodemon",
-    "be:build": "tsc server/index.ts --project server/tsconfig.json",
+    "be:build": "tsc --project server/tsconfig.json",
     "be:test": "echo \"SOON\"",
     "test": "ts-node server/index.ts"
   },
@@ -55,6 +55,6 @@
     "react-scripts": "3.4.3",
     "socket.io-client": "^2.3.0",
     "ts-node": "^9.0.0",
-    "typescript": "^3.7.5"
+    "typescript": "^4.0.2"
   }
 }
