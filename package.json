@@ -8,7 +8,7 @@
     "fe:build": "react-scripts build",
     "fe:test": "react-scripts test",
     "be:dev": "nodemon",
-    "be:build": "tsc server/index.ts",
+    "be:build": "tsc server/index.ts --project server/tsconfig.json",
     "be:test": "echo \"SOON\"",
     "test": "ts-node server/index.ts"
   },
