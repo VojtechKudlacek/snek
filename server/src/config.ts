@@ -1,18 +1,19 @@
 class Config {
 
-	public readonly defaultPlayerLength = 100;
-	public readonly fieldWidth = 2000;
-	public readonly fieldHeight = 2000;
-	public readonly socketEventName = 'event';
+	public static readonly defaultPlayerLength = 100;
+	public static readonly fieldWidth = 2000;
+	public static readonly fieldHeight = 2000;
+	public static readonly socketEventName = 'event';
+	public static readonly serverPort = Number(process.env.PORT);
 
-	get forPlayer() {
+	public static get forPlayer() {
 		return {
-			width: this.fieldWidth,
-			height: this.fieldHeight,
+			width: Config.fieldWidth,
+			height: Config.fieldHeight,
 			time: Date.now(),
 		};
 	}
 
 }
 
-export default new Config();
+export default Config;

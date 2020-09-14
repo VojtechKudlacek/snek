@@ -1,8 +1,8 @@
 import { Server, Socket } from 'socket.io';
-import SocketHandler from '../socket/SocketHandler';
-import Player from './Player';
-import config from '../config';
-import teardown from '../services/teardown';
+import SocketHandler from 'socket/SocketHandler';
+import Player from 'game/Player';
+import config from 'config';
+import teardown from 'services/teardown';
 
 class Game {
 

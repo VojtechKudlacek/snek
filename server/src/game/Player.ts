@@ -1,6 +1,6 @@
 import { Socket } from 'socket.io';
-import config from '../config';
-import { randomFromTo } from '../utils';
+import { randomFromTo } from 'utils/number';
+import config from 'config';
 
 interface Properties {
 	id: string;
