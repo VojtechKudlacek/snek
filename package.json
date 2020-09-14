@@ -6,10 +6,10 @@
 	"license": "ISC",
 	"private": true,
 	"scripts": {
-		"start": "",
-		"build": "concurrently \"cd client && npm run build\" \"cd server && npm run build\"",
-		"dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
-		"postinstall": "concurrently \"cd client && npm ci\" \"cd server && npm ci\""
+		"start": "concurrently \"serve client/build\" \"node server/build/index\"",
+		"build": "concurrently \"npm run build --prefix client\" \"npm run build --prefix server\"",
+		"dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+		"postinstall": "concurrently \"npm ci --prefix client\" \"npm ci --prefix server\""
 	},
 	"contributors": [
 		{
