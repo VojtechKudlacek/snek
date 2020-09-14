@@ -8,7 +8,7 @@
 	"scripts": {
 		"start": "concurrently \"serve client/build\" \"node server/build/index\"",
 		"build": "concurrently \"npm run build --prefix client\" \"npm run build --prefix server\"",
-		"dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+		"dev": "concurrently \"npm run fe:dev\" \"npm run be:dev\"",
 		"postinstall": "concurrently \"npm ci --prefix client\" \"npm ci --prefix server\"",
 		"fe:dev": "npm run dev --prefix client",
 		"be:dev": "npm run dev --prefix server"
