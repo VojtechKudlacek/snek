@@ -34,7 +34,7 @@ class SocketHandler {
 	}
 
 	public kill(): void {
-		this.sockets.forEach((socket) => socket.disconnect);
+		this.sockets.forEach((socket) => socket.disconnect(true));
 		this.sockets.clear();
 		this.listeners.clear();
 	}
