@@ -10,7 +10,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"jsx": "react",
-		"module": "esnext",
+		"module": "ESNext",
 		"moduleResolution": "node",
 		"noEmit": true,
 		"noImplicitAny": true,
@@ -21,15 +21,10 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "es5",
+		"target": "ES5",
 		"typeRoots": [
 			"node_modules/@types",
 			"src/@types"
-		],
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
 		]
 	},
 	"include": [
@@ -37,10 +32,6 @@
 	],
 	"exclude": [
 		"node_modules",
-		"build",
-		"scripts",
-		"webpack",
-		"config",
-		"server",
+		"build"
 	]
 }
