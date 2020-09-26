@@ -4,11 +4,7 @@ import socketManager from 'services/SocketManager';
 import store from 'store';
 
 const App: FunctionComponent = () => {
-	useEffect(() => {
-		socketManager.connect(() => {
-			store.dispatch();
-		});
-	}, []);
+	useEffect(socketManager.connect, []);
 
 	return (
 		<StrictMode>

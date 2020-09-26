@@ -1,8 +1,8 @@
-interface ReducerAction {
-	type: string;
-	payload?: any;
-}
-
 interface SocketReducerState {
 	loading: boolean;
+	connected: boolean;
+}
+
+interface StoreState {
+	socket: SocketReducerState;
 }
