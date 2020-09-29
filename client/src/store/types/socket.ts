@@ -1,2 +1,3 @@
-export const SET_LOADING: SocketReducerSetLoading = 'socket/setLoading';
-export const SET_CONNECTED: SocketReducerSetConnected = 'socket/setConnected';
+export const SET_CONNECTED: SocketTypeSetConnected = 'socket/setConnected';
+export const SET_LOADING: SocketTypeSetLoading = 'socket/setLoading';
+export const SET_ERROR: SocketTypeSetError = 'socket/setError';

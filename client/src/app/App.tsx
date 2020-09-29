@@ -1,7 +1,9 @@
 import React, { StrictMode, FunctionComponent, useEffect } from 'react';
 import { Provider } from 'react-redux';
-import socketManager from 'services/SocketManager';
 import store from 'store';
+import socketManager from 'services/SocketManager';
+import Game from 'components/Game';
+import Overlay from 'components/Overlay';
 
 const App: FunctionComponent = () => {
 	useEffect(socketManager.connect, []);
@@ -9,9 +11,9 @@ const App: FunctionComponent = () => {
 	return (
 		<StrictMode>
 			<Provider store={store}>
-				<div
-					className="kekw"
-				/>
+				<Overlay>
+					<Game />
+				</Overlay>
 			</Provider>
 		</StrictMode>
 	);

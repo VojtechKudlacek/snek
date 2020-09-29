@@ -11,10 +11,15 @@ export class SocketManager {
 		store.dispatch(setConnected(true));
 	}
 
-	public connect(): void {
+	private disconnect(): void {
+		this.socket.disconnect();
+	}
+
+	public connect(): VoidFunction {
 		store.dispatch(setLoading(true));
 		this.socket.on('connect', this.onConnecion.bind(this));
 		this.socket = io({ port: process.env.REACT_APP_SOCKET_PORT });
+		return this.disconnect.bind(this);
 	}
 
 }
