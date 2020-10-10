@@ -1,10 +1,10 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import Loading from 'components/Loading';
 
-interface Properties {
+export interface Properties {
 	socketConnecting: boolean;
 	socketConnected: boolean;
-	socketError: boolean;
+	socketError: string;
 	playerName: string;
 }
 
