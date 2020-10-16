@@ -1,14 +1,12 @@
 // Socket Reducer
 
 type SocketTypeSetLoading = 'socket/setLoading';
-type SocketTypeSetConnected = 'socket/setConnected';
 type SocketTypeSetError = 'socket/setError';
 
-type SocketActionSetConnected = ReducerAction<SocketTypeSetConnected, boolean>;
 type SocketActionSetLoading = ReducerAction<SocketTypeSetLoading, boolean>;
 type SocketActionSetError = ReducerAction<SocketTypeSetError, string>;
 
-type SocketReducerActions = SocketActionSetLoading | SocketActionSetConnected | SocketActionSetError;
+type SocketReducerActions = SocketActionSetLoading | SocketActionSetError;
 
 // Player reducer
 

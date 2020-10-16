@@ -1,6 +1,5 @@
 interface SocketReducerState {
 	loading: boolean;
-	connected: boolean;
 	error: string;
 }
 

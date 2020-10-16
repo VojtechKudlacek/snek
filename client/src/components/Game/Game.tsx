@@ -1,10 +1,12 @@
 import React, { Component, createRef, ReactNode, RefObject } from 'react';
+import SnekGame from 'game';
 
 interface Properties {}
 
 class Game extends Component<Properties> {
 
 	private canvasRef: RefObject<HTMLCanvasElement>;
+	private game!: SnekGame;
 
 	constructor(props: Properties) {
 		super(props);
@@ -12,7 +14,9 @@ class Game extends Component<Properties> {
 	}
 
 	componentDidMount(): void {
-		this
+		const renderer = this.canvasRef.current as HTMLCanvasElement;
+		this.game = new SnekGame({ renderer });
+		this.game.start();
 	}
 
 	render(): ReactNode {

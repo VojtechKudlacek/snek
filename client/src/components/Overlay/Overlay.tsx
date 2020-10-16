@@ -1,24 +1,34 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { FunctionComponent, useCallback, useMemo } from 'react';
+import socketManager from 'services/SocketManager';
 import Loading from 'components/Loading';
+import Button from 'components/Button';
 
 export interface Properties {
 	socketConnecting: boolean;
-	socketConnected: boolean;
 	socketError: string;
 	playerName: string;
 }
 
 const Overlay: FunctionComponent<Properties> = (props) => {
-	const { playerName, socketConnected, socketConnecting, socketError, children } = props;
+	const { playerName, socketConnecting, socketError, children } = props;
+
+	const reconnect = useCallback(() => socketManager.reconnect(), []);
 
 	const content = useMemo(() => {
 		if (socketConnecting) {
 			return <Loading />;
-		} else if (!socketConnected && socketError) {
-			return <div className="socket-error">{socketError}</div>;
+		} else if (socketError) {
+			return (
+				<div className="socket-fail">
+					<div className="socket-error">{socketError}</div>
+					<div className="socket-reconnect">
+						<Button onClick={reconnect}>Reconnect</Button>
+					</div>
+				</div>
+			);
 		}
 		return children;
-	}, [socketConnecting, socketConnected, socketError]);
+	}, [socketConnecting, socketError]);
 
 	return (
 		<div className="overlay">

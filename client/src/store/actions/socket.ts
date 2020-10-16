@@ -1,9 +1,4 @@
-import { SET_CONNECTED, SET_ERROR, SET_LOADING } from 'store/types/socket';
-
-export const setConnected = (connected: boolean): SocketActionSetConnected => ({
-	type: SET_CONNECTED,
-  payload: connected,
-});
+import { SET_ERROR, SET_LOADING } from 'store/types/socket';
 
 export const setLoading = (loading: boolean): SocketActionSetLoading => ({
 	type: SET_LOADING,
