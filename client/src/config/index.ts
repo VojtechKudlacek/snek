@@ -1,5 +1,9 @@
-const config = {
-	socketPort: process.env.REACT_APP_SOCKET_PORT,
-};
+class Config {
 
-export default config;
+	public static readonly socketPort = process.env.REACT_APP_SOCKET_PORT;
+	public static readonly gameWidth = 800;
+	public static readonly gameHeight = 600;
+
+}
+
+export default Config;

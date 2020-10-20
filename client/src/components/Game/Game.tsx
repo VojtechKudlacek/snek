@@ -1,4 +1,5 @@
 import React, { Component, createRef, ReactNode, RefObject } from 'react';
+import config from 'config';
 import SnekGame from 'game';
 
 interface Properties {}
@@ -21,7 +22,13 @@ class Game extends Component<Properties> {
 
 	render(): ReactNode {
 		return (
-			<canvas ref={this.canvasRef} />
+			<div className="game">
+				<canvas
+					ref={this.canvasRef}
+					width={config.gameWidth}
+					height={config.gameHeight}
+				/>
+			</div>
 		);
 	}
 

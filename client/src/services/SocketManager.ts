@@ -2,6 +2,7 @@ import io from 'socket.io-client';
 import store from 'store';
 import config from 'config';
 import { setLoading, setError } from 'store/actions/socket';
+import EventEmitter from 'services/EventEmitter';
 
 export class SocketManager {
 
