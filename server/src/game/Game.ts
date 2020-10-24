@@ -43,7 +43,7 @@ class Game {
 			case 'changeDirection': {
 				const player = this.players.get(socket.id);
 				player?.changeDirection(data.payload as DirectionChange);
-				socket.emit('changeDirectory', data.payload);
+				socket.emit('changeDirection', data.payload);
 				break;
 			}
 			case 'death': {
