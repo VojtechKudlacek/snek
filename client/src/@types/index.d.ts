@@ -7,9 +7,9 @@ interface ReducerAction<T = string, P = void> {
 	payload: P;
 }
 
-type EventSubscriber = (payload: unknown) => void | Promise<void>;
+type EventSubscriber<P = any> = (payload: P) => void | Promise<void>;
 
 interface SocketEventData {
 	name: string;
-	payload: unknown;
+	payload: any;
 }

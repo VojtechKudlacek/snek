@@ -15,15 +15,20 @@ class Game extends Component<Properties> {
 	}
 
 	componentDidMount(): void {
-		const renderer = this.canvasRef.current as HTMLCanvasElement;
+		const renderer = this.canvasRef.current!;
 		this.game = new SnekGame({ renderer });
 		this.game.start();
+	}
+
+	componentWillUnmount(): void {
+		this.game.end();
 	}
 
 	render(): ReactNode {
 		return (
 			<div className="game">
 				<canvas
+					className="renderer"
 					ref={this.canvasRef}
 					width={config.gameWidth}
 					height={config.gameHeight}

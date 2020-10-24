@@ -60,7 +60,7 @@ export class SocketManager {
 		return this.disconnect.bind(this);
 	}
 
-	public subscribe(eventName: string, subscriber: EventSubscriber): void {
+	public subscribe<P>(eventName: string, subscriber: EventSubscriber<P>): void {
 		let subscribers: Array<EventSubscriber> = [];
 		if (this.events.has(eventName)) {
 			subscribers = this.events.get(eventName)!;
@@ -70,7 +70,7 @@ export class SocketManager {
 		}
 	}
 
-	public unsubscribe(eventName: string, subscriber: EventSubscriber): void {
+	public unsubscribe<P>(eventName: string, subscriber: EventSubscriber<P>): void {
 		if (this.events.has(eventName)) {
 			const subscribers = this.events.get(eventName)!;
 			const index = subscribers.indexOf(subscriber);
