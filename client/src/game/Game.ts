@@ -6,7 +6,7 @@ interface Properties {
 
 class Game {
 
-	private alive: boolean;
+	private alive: boolean; // Prevents from calling animation frame on non-existing instance
 	private renderer: HTMLCanvasElement;
 	private ctx: CanvasRenderingContext2D;
 	private playerStorage: PlayerStorage;
@@ -17,6 +17,10 @@ class Game {
 		this.ctx = this.renderer.getContext('2d')!;
 		this.playerStorage = new PlayerStorage();
 		this.loop = this.loop.bind(this);
+	}
+
+	private render(): void {
+
 	}
 
 	private loop(time: number): void {
